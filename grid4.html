@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
       body {
         display: flex;
         justify-content: center;
@@ -25,18 +29,23 @@
 
       @media (max-width: 768px) {
         .container {
+          width: 400px;
           grid-template-columns: repeat(2, 1fr);
           grid-template-rows: repeat(4, 1fr);
           grid-template-areas:
-           "box1 box2"
-           "box1 box3"
-           "box4 box3"
-           "box5 box5";
+            "box1 box2"
+            "box1 box3"
+            "box4 box3"
+            "box4 box5";
         }
       }
 
       .box {
         background-color: blue;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     </style>
   </head>
